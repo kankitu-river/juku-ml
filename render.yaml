@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: juku-ml
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ML_API_TOKEN
+        sync: false   # Renderダッシュボードで手動設定
+    plan: free
