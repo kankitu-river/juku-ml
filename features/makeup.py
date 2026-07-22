@@ -1,8 +1,6 @@
 """振替候補スコアリング (B-3)"""
 from __future__ import annotations
 from pydantic import BaseModel
-import numpy as np
-
 
 class Candidate(BaseModel):
     candidate_id: str
